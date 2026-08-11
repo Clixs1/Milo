@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lora", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 4rem;
+    background-image: url("../images/bckhgrnd.jpg");
+    background-repeat: no-repeat;   
+    background-size: cover;    
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.main {
+    max-width: 600px;
+}
+
+.main h1 {
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    margin-bottom: 1rem;
+}
+
+.main p {
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    line-height: 1.7;
+}
+
+.polaroid {
+    width: min(280px, 80vw);
+    background: white;
+    padding: 15px 15px 40px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .3);
+    border-radius: 3px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transform: rotate(-5deg);
+    transition: .3s;
+    position: relative;
+    animation: pulse 3s infinite;
+}
+
+.polaroid img {
+    width: 100%;
+    display: block;
+}
+
+.polaroid h3 {
+    margin-top: 15px;
+    font-size: clamp(1rem, 2vw, 1.4rem);
+}
+
+.polaroid::before {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    background: rgba(230, 221, 167, 0.7);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+        padding: 1.5rem;
+    }
+
+    .main {
+        max-width: 100%;
+    }
+
+    .polaroid {
+        width: 220px;
+        margin: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(-5deg) scale(1.03);
+    }
+}

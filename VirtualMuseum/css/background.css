@@ -1,0 +1,640 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url("../images/museumwall.png") center / cover no-repeat;
+    font-family: "Lora", serif;
+}
+
+
+/* =======================
+   Museum
+======================= */
+
+.museum {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.wall {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =======================
+   Museum Header
+======================= */
+
+.museum-header {
+    position: absolute;
+
+    top: clamp(15px, 2.5vh, 35px);
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+    text-align: center;
+
+    z-index: 500;
+    pointer-events: none;
+}
+
+.museum-header h1 {
+    margin: 0;
+
+    font-size: clamp(26px, 3.5vw, 50px);
+    font-weight: 700;
+
+    color: #fff4dc;
+
+    letter-spacing: clamp(1px, 0.2vw, 3px);
+
+    text-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.museum-header p {
+    margin-top: 5px;
+
+    font-size: clamp(10px, 1.1vw, 15px);
+
+    color: #f3dfbd;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+
+/* =======================
+   Paintings
+======================= */
+
+.painting {
+    position: absolute;
+}
+
+.painting img {
+    width: clamp(75px, 10vw, 170px);
+    height: auto;
+
+    display: block;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+
+/* =======================
+   Hover Effect
+======================= */
+
+.painting:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+
+/* =======================
+   Painting Information
+======================= */
+
+.painting-info {
+    position: absolute;
+
+    left: 110%;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: clamp(180px, 16vw, 230px);
+    height: clamp(150px, 20vh, 200px);
+
+    padding: clamp(12px, 1.5vw, 20px);
+
+    background: rgba(255, 248, 235, 0.96);
+    color: #2b241e;
+
+    border-left: 3px solid #8b6f47;
+
+    font-family: "Lora", serif;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 100;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    pointer-events: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #8b6f47 transparent;
+}
+
+
+/* Show message */
+
+.painting:hover .painting-info {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =======================
+   Message Scrollbar
+======================= */
+
+.painting-info::-webkit-scrollbar {
+    width: 5px;
+}
+
+.painting-info::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.painting-info::-webkit-scrollbar-thumb {
+    background: #8b6f47;
+    border-radius: 10px;
+}
+
+
+/* =======================
+   Message Text
+======================= */
+
+.painting-info h3 {
+    margin: 0 0 8px 0;
+
+    font-size: clamp(14px, 1.3vw, 18px);
+}
+
+.painting-info p {
+    margin: 0;
+
+    font-size: clamp(10px, 0.95vw, 13px);
+    line-height: 1.6;
+}
+
+
+/* =======================
+   Rotated Paintings
+   8 - 11
+======================= */
+
+.painting:nth-child(8) .painting-info,
+.painting:nth-child(9) .painting-info,
+.painting:nth-child(10) .painting-info,
+.painting:nth-child(11) .painting-info {
+
+    left: 50%;
+    top: 50%;
+
+    width: 230px;
+    height: 200px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(90deg)
+        translateX(-120px);
+
+    border-left: 3px solid #8b6f47;
+    border-bottom: none;
+}
+
+
+/* =======================
+   DESKTOP
+======================= */
+
+/* Top row */
+
+.painting:nth-child(1) {
+    top: 17%;
+    left: 12%;
+}
+
+.painting:nth-child(2) {
+    top: 17%;
+    left: 29%;
+}
+
+.painting:nth-child(3) {
+    top: 17%;
+    left: 46%;
+}
+
+.painting:nth-child(4) {
+    top: 17%;
+    left: 63%;
+}
+
+
+/* Middle */
+
+.painting:nth-child(5) {
+    top: 44%;
+    left: 20%;
+}
+
+.painting:nth-child(6) {
+    top: 44%;
+    left: 50%;
+}
+
+.painting:nth-child(7) {
+    top: 46%;
+    left: 4%;
+}
+
+
+/* Rotated */
+
+.painting:nth-child(8) {
+    top: 46%;
+    left: 35%;
+
+    transform: rotate(-90deg);
+}
+
+.painting:nth-child(9) {
+    top: 46%;
+    left: 64%;
+
+    transform: rotate(-90deg);
+}
+
+.painting:nth-child(10) {
+    top: 18%;
+    left: 80%;
+
+    transform: rotate(-90deg);
+}
+
+.painting:nth-child(11) {
+    top: 47%;
+    left: 83%;
+
+    transform: rotate(-90deg);
+}
+
+
+/* =======================
+   LARGE LAPTOP
+======================= */
+
+@media (max-width: 1200px) {
+
+    .painting img {
+        width: clamp(85px, 10vw, 145px);
+    }
+
+    .painting:nth-child(1) {
+        left: 10%;
+    }
+
+    .painting:nth-child(2) {
+        left: 28%;
+    }
+
+    .painting:nth-child(3) {
+        left: 46%;
+    }
+
+    .painting:nth-child(4) {
+        left: 64%;
+    }
+
+    .painting:nth-child(5) {
+        left: 18%;
+    }
+
+    .painting:nth-child(6) {
+        left: 48%;
+    }
+
+    .painting:nth-child(8) {
+        left: 33%;
+    }
+
+    .painting:nth-child(9) {
+        left: 62%;
+    }
+
+    .painting:nth-child(10) {
+        left: 79%;
+    }
+
+    .painting:nth-child(11) {
+        left: 81%;
+    }
+}
+
+
+/* =======================
+   TABLET
+======================= */
+
+@media (max-width: 768px) {
+
+    .museum-header {
+        top: 2%;
+        width: 95%;
+    }
+
+    .museum-header h1 {
+        font-size: clamp(24px, 5vw, 38px);
+    }
+
+    .museum-header p {
+        font-size: clamp(9px, 1.8vw, 12px);
+    }
+
+
+    .painting img {
+        width: clamp(70px, 13vw, 115px);
+    }
+
+
+    /* Top row
+       Moved lower to avoid header */
+
+    .painting:nth-child(1) {
+        top: 16%;
+        left: 3%;
+    }
+
+    .painting:nth-child(2) {
+        top: 16%;
+        left: 24%;
+    }
+
+    .painting:nth-child(3) {
+        top: 16%;
+        left: 45%;
+    }
+
+    .painting:nth-child(4) {
+        top: 16%;
+        left: 66%;
+    }
+
+
+    /* Middle */
+
+    .painting:nth-child(5) {
+        top: 42%;
+        left: 13%;
+    }
+
+    .painting:nth-child(6) {
+        top: 42%;
+        left: 44%;
+    }
+
+    .painting:nth-child(7) {
+        top: 48%;
+        left: 2%;
+    }
+
+
+    /* Rotated */
+
+    .painting:nth-child(8) {
+        top: 48%;
+        left: 30%;
+    }
+
+    .painting:nth-child(9) {
+        top: 48%;
+        left: 58%;
+    }
+
+    .painting:nth-child(10) {
+        top: 28%;
+        left: 78%;
+    }
+
+    .painting:nth-child(11) {
+        top: 70%;
+        left: 78%;
+    }
+
+
+    /* Messages */
+
+    .painting-info {
+        width: 190px;
+        height: 170px;
+
+        padding: 14px 16px;
+    }
+
+    .painting-info h3 {
+        font-size: 15px;
+    }
+
+    .painting-info p {
+        font-size: 11px;
+        line-height: 1.5;
+    }
+}
+
+
+/* =======================
+   MOBILE
+======================= */
+
+@media (max-width: 480px) {
+
+    .museum-header {
+        top: 2%;
+        width: 94%;
+    }
+
+    .museum-header h1 {
+        font-size: 25px;
+        letter-spacing: 1px;
+    }
+
+    .museum-header p {
+        font-size: 9px;
+        margin-top: 3px;
+    }
+
+
+    .painting img {
+        width: clamp(55px, 17vw, 75px);
+    }
+
+
+    /* Top row */
+
+    .painting:nth-child(1) {
+        top: 14%;
+        left: 3%;
+    }
+
+    .painting:nth-child(2) {
+        top: 14%;
+        left: 27%;
+    }
+
+    .painting:nth-child(3) {
+        top: 14%;
+        left: 52%;
+    }
+
+    .painting:nth-child(4) {
+        top: 14%;
+        left: 77%;
+    }
+
+
+    /* Middle */
+
+    .painting:nth-child(5) {
+        top: 38%;
+        left: 14%;
+    }
+
+    .painting:nth-child(6) {
+        top: 38%;
+        left: 47%;
+    }
+
+    .painting:nth-child(7) {
+        top: 64%;
+        left: 3%;
+    }
+
+
+    /* Rotated */
+
+    .painting:nth-child(8) {
+        top: 64%;
+        left: 29%;
+    }
+
+    .painting:nth-child(9) {
+        top: 64%;
+        left: 57%;
+    }
+
+    .painting:nth-child(10) {
+        top: 28%;
+        left: 80%;
+    }
+
+    .painting:nth-child(11) {
+        top: 78%;
+        left: 80%;
+    }
+
+
+    /* Messages */
+
+    .painting-info {
+        width: 145px;
+        height: 135px;
+
+        padding: 10px 12px;
+    }
+
+    .painting-info h3 {
+        font-size: 13px;
+        margin-bottom: 5px;
+    }
+
+    .painting-info p {
+        font-size: 9px;
+        line-height: 1.4;
+    }
+}
+
+
+/* =======================
+   VERY SMALL PHONES
+======================= */
+
+@media (max-width: 360px) {
+
+    .museum-header h1 {
+        font-size: 22px;
+    }
+
+    .museum-header p {
+        font-size: 8px;
+    }
+
+    .painting img {
+        width: 58px;
+    }
+
+    .painting-info {
+        width: 130px;
+        height: 120px;
+
+        padding: 8px 10px;
+    }
+
+    .painting-info h3 {
+        font-size: 12px;
+    }
+
+    .painting-info p {
+        font-size: 8px;
+        line-height: 1.35;
+    }
+}
+
+
+/* =======================
+   Breathing Animation
+======================= */
+
+@keyframes breathe {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
+}
+
+
+/* =======================
+   Hide Museum Scrollbar
+======================= */
+
+.museum::-webkit-scrollbar {
+    display: none;
+}
+
+.museum {
+    scrollbar-width: none;
+}
