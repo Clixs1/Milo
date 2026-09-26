@@ -17,9 +17,7 @@ body {
 }
 
 
-/* =======================
-   Museum
-======================= */
+
 
 .museum {
     position: relative;
@@ -34,9 +32,7 @@ body {
 }
 
 
-/* =======================
-   Museum Header
-======================= */
+
 
 .museum-header {
     position: absolute;
@@ -81,9 +77,7 @@ body {
 }
 
 
-/* =======================
-   Paintings
-======================= */
+
 
 .painting {
     position: absolute;
@@ -101,9 +95,7 @@ body {
 }
 
 
-/* =======================
-   Hover Effect
-======================= */
+
 
 .painting:hover img {
     transform: scale(1.05);
@@ -111,9 +103,7 @@ body {
 }
 
 
-/* =======================
-   Painting Information
-======================= */
+
 
 .painting-info {
     position: absolute;
@@ -154,7 +144,6 @@ body {
 }
 
 
-/* Show message */
 
 .painting:hover .painting-info {
     opacity: 1;
@@ -162,9 +151,7 @@ body {
 }
 
 
-/* =======================
-   Message Scrollbar
-======================= */
+
 
 .painting-info::-webkit-scrollbar {
     width: 5px;
@@ -180,9 +167,7 @@ body {
 }
 
 
-/* =======================
-   Message Text
-======================= */
+
 
 .painting-info h3 {
     margin: 0 0 8px 0;
@@ -198,10 +183,7 @@ body {
 }
 
 
-/* =======================
-   Rotated Paintings
-   8 - 11
-======================= */
+
 
 .painting:nth-child(8) .painting-info,
 .painting:nth-child(9) .painting-info,
@@ -224,11 +206,7 @@ body {
 }
 
 
-/* =======================
-   DESKTOP
-======================= */
 
-/* Top row */
 
 .painting:nth-child(1) {
     top: 17%;
@@ -251,7 +229,7 @@ body {
 }
 
 
-/* Middle */
+
 
 .painting:nth-child(5) {
     top: 44%;
@@ -269,7 +247,7 @@ body {
 }
 
 
-/* Rotated */
+
 
 .painting:nth-child(8) {
     top: 46%;
@@ -300,9 +278,6 @@ body {
 }
 
 
-/* =======================
-   LARGE LAPTOP
-======================= */
 
 @media (max-width: 1200px) {
 
@@ -352,9 +327,7 @@ body {
 }
 
 
-/* =======================
-   TABLET
-======================= */
+
 
 @media (max-width: 768px) {
 
@@ -377,8 +350,7 @@ body {
     }
 
 
-    /* Top row
-       Moved lower to avoid header */
+    
 
     .painting:nth-child(1) {
         top: 16%;
@@ -419,7 +391,7 @@ body {
     }
 
 
-    /* Rotated */
+    
 
     .painting:nth-child(8) {
         top: 48%;
@@ -442,7 +414,7 @@ body {
     }
 
 
-    /* Messages */
+   
 
     .painting-info {
         width: 190px;
@@ -462,9 +434,7 @@ body {
 }
 
 
-/* =======================
-   MOBILE
-======================= */
+
 
 @media (max-width: 480px) {
 
@@ -530,7 +500,7 @@ body {
     }
 
 
-    /* Rotated */
+   
 
     .painting:nth-child(8) {
         top: 64%;
@@ -553,7 +523,7 @@ body {
     }
 
 
-    /* Messages */
+    
 
     .painting-info {
         width: 145px;
@@ -574,9 +544,7 @@ body {
 }
 
 
-/* =======================
-   VERY SMALL PHONES
-======================= */
+
 
 @media (max-width: 360px) {
 
@@ -610,9 +578,7 @@ body {
 }
 
 
-/* =======================
-   Breathing Animation
-======================= */
+
 
 @keyframes breathe {
 
@@ -627,9 +593,7 @@ body {
 }
 
 
-/* =======================
-   Hide Museum Scrollbar
-======================= */
+
 
 .museum::-webkit-scrollbar {
     display: none;
