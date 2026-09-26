@@ -205,6 +205,7 @@ body {
     border-bottom: none;
 }
 
+
 /* Only Painting 11 */
 
 .painting:nth-child(11) {
@@ -215,16 +216,22 @@ body {
 
 .painting:nth-child(11) img {
     width: 220px;
+    filter: grayscale(100%);
 }
 
 .painting:nth-child(11) .painting-info {
     font-family: "Times New Roman", Times, serif;
+    background: white;
+    color: black;
+    border-left: 3px solid black;
 }
 
 .painting:nth-child(11) .painting-info h3,
 .painting:nth-child(11) .painting-info p {
     font-family: "Times New Roman", Times, serif;
+    color: black;
 }
+
 
 
 
