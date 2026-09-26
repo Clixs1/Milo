@@ -17,7 +17,9 @@ body {
 }
 
 
-
+/* =======================
+   Museum
+======================= */
 
 .museum {
     position: relative;
@@ -32,7 +34,9 @@ body {
 }
 
 
-
+/* =======================
+   Museum Header
+======================= */
 
 .museum-header {
     position: absolute;
@@ -77,7 +81,9 @@ body {
 }
 
 
-
+/* =======================
+   Paintings
+======================= */
 
 .painting {
     position: absolute;
@@ -95,7 +101,9 @@ body {
 }
 
 
-
+/* =======================
+   Hover Effect
+======================= */
 
 .painting:hover img {
     transform: scale(1.05);
@@ -103,7 +111,9 @@ body {
 }
 
 
-
+/* =======================
+   Painting Information
+======================= */
 
 .painting-info {
     position: absolute;
@@ -144,6 +154,7 @@ body {
 }
 
 
+/* Show message */
 
 .painting:hover .painting-info {
     opacity: 1;
@@ -151,7 +162,9 @@ body {
 }
 
 
-
+/* =======================
+   Message Scrollbar
+======================= */
 
 .painting-info::-webkit-scrollbar {
     width: 5px;
@@ -167,7 +180,9 @@ body {
 }
 
 
-
+/* =======================
+   Message Text
+======================= */
 
 .painting-info h3 {
     margin: 0 0 8px 0;
@@ -183,12 +198,37 @@ body {
 }
 
 
+/* =======================
+   Rotated Paintings
+   8 - 11
+======================= */
+
+.painting:nth-child(8) .painting-info,
+.painting:nth-child(9) .painting-info,
+.painting:nth-child(10) .painting-info,
+.painting:nth-child(11) .painting-info {
+
+    left: 50%;
+    top: 50%;
+
+    width: 230px;
+    height: 200px;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(90deg)
+        translateX(-120px);
+
+    border-left: 3px solid #8b6f47;
+    border-bottom: none;
+}
 
 
-.painting:nth-child(8) .painting-info, .painting:nth-child(9) .painting-info, .painting:nth-child(10) .painting-info { left: 50%; top: 50%; width: 230px; height: 200px; transform: translate(-50%, -50%) rotate(90deg) translateX(-120px); border-left: 3px solid #8b6f47; border-bottom: none; } /* PAINTING 11 */ .painting:nth-child(11) .painting-info { left: 50%; top: 50%; width: 500px; height: 500px; /* Counteract the -90deg of Painting 11 */ transform: translate(-50%, -50%) rotate(90deg); background: white; color: black; border: 2px solid black; font-family: "Times New Roman", Times, serif; padding: 35px; overflow-y: auto; } /* Painting 11 title */ .painting:nth-child(11) .painting-info h3 { color: black; font-family: "Times New Roman", Times, serif; font-size: 28px; } /* Painting 11 text */ .painting:nth-child(11) .painting-info p { color: black; font-family: "Times New Roman", Times, serif; font-size: 17px; line-height: 1.7; }
+/* =======================
+   DESKTOP
+======================= */
 
-
-
+/* Top row */
 
 .painting:nth-child(1) {
     top: 17%;
@@ -211,7 +251,7 @@ body {
 }
 
 
-
+/* Middle */
 
 .painting:nth-child(5) {
     top: 44%;
@@ -229,7 +269,7 @@ body {
 }
 
 
-
+/* Rotated */
 
 .painting:nth-child(8) {
     top: 46%;
@@ -260,6 +300,9 @@ body {
 }
 
 
+/* =======================
+   LARGE LAPTOP
+======================= */
 
 @media (max-width: 1200px) {
 
@@ -309,7 +352,9 @@ body {
 }
 
 
-
+/* =======================
+   TABLET
+======================= */
 
 @media (max-width: 768px) {
 
@@ -332,7 +377,8 @@ body {
     }
 
 
-    
+    /* Top row
+       Moved lower to avoid header */
 
     .painting:nth-child(1) {
         top: 16%;
@@ -373,7 +419,7 @@ body {
     }
 
 
-    
+    /* Rotated */
 
     .painting:nth-child(8) {
         top: 48%;
@@ -396,7 +442,7 @@ body {
     }
 
 
-   
+    /* Messages */
 
     .painting-info {
         width: 190px;
@@ -416,7 +462,9 @@ body {
 }
 
 
-
+/* =======================
+   MOBILE
+======================= */
 
 @media (max-width: 480px) {
 
@@ -482,7 +530,7 @@ body {
     }
 
 
-   
+    /* Rotated */
 
     .painting:nth-child(8) {
         top: 64%;
@@ -505,7 +553,7 @@ body {
     }
 
 
-    
+    /* Messages */
 
     .painting-info {
         width: 145px;
@@ -526,7 +574,9 @@ body {
 }
 
 
-
+/* =======================
+   VERY SMALL PHONES
+======================= */
 
 @media (max-width: 360px) {
 
@@ -560,7 +610,9 @@ body {
 }
 
 
-
+/* =======================
+   Breathing Animation
+======================= */
 
 @keyframes breathe {
 
@@ -575,7 +627,9 @@ body {
 }
 
 
-
+/* =======================
+   Hide Museum Scrollbar
+======================= */
 
 .museum::-webkit-scrollbar {
     display: none;
