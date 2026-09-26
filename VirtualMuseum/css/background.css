@@ -222,7 +222,9 @@ body {
     border-left: 3px solid #8b6f47;
     border-bottom: none;
 }
-.painting:nth-child(11) .painting-info { width: 280px; height: 240px; padding: 20px; /* Keep the same behavior as the other rotated paintings */ left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(90deg) translateX(-120px); background: rgba(255, 248, 235, 0.96); color: #2b241e; border-left: 3px solid #8b6f47; border-bottom: none; font-family: "Lora", serif; z-index: 100; } /* Slightly larger text */ .painting:nth-child(11) .painting-info h3 { font-size: 20px; } .painting:nth-child(11) .painting-info p { font-size: 14px; line-height: 1.6; }
+
+
+.painting:nth-child(11) .painting-info { width: 250px; height: 210px; padding: 18px; left: 50%; top: 50%; transform: translate(-50%, -50%) rotate(90deg) translateX(-120px); }
 /* =======================
    DESKTOP
 ======================= */
