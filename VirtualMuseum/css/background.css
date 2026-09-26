@@ -206,9 +206,6 @@ body {
 }
 
 
-/* Only Painting 11 */
-
-.painting:nth-child(11) .painting-info { position: fixed; width: 500px; height: 500px; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; color: black; border: 2px solid black; padding: 35px; font-family: "Times New Roman", Times, serif; z-index: 9999; } /* Title */ .painting:nth-child(11) .painting-info h3 { font-family: "Times New Roman", Times, serif; color: black; font-size: 28px; } /* Letter */ .painting:nth-child(11) .painting-info p { font-family: "Times New Roman", Times, serif; color: black; font-size: 17px; line-height: 1.7; }
 
 
 
