@@ -205,6 +205,28 @@ body {
     border-bottom: none;
 }
 
+/* Only Painting 11 */
+
+.painting:nth-child(11) {
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.painting:nth-child(11) img {
+    width: 220px;
+}
+
+.painting:nth-child(11) .painting-info {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.painting:nth-child(11) .painting-info h3,
+.painting:nth-child(11) .painting-info p {
+    font-family: "Times New Roman", Times, serif;
+}
+
+
 
 
 
