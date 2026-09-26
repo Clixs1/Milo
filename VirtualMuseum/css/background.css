@@ -187,8 +187,7 @@ body {
 
 .painting:nth-child(8) .painting-info,
 .painting:nth-child(9) .painting-info,
-.painting:nth-child(10) .painting-info,
-.painting:nth-child(11) .painting-info {
+.painting:nth-child(10) .painting-info,{
 
     left: 50%;
     top: 50%;
@@ -206,7 +205,7 @@ body {
 }
 
 
-
+.painting:nth-child(11) .painting-info { left: 50%; top: 50%; width: 500px; height: 500px; transform: translate(-50%, -50%) rotate(90deg); background: white; color: black; border: 2px solid black; font-family: "Times New Roman", Times, serif; padding: 35px; } /* Painting 11 text */ .painting:nth-child(11) .painting-info h3 { color: black; font-family: "Times New Roman", Times, serif; font-size: 28px; } .painting:nth-child(11) .painting-info p { color: black; font-family: "Times New Roman", Times, serif; font-size: 17px; line-height: 1.7; }
 
 
 
